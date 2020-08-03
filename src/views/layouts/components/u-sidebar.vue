@@ -5,10 +5,10 @@
   >
     <div class="logo-container-vertical">
       <img
-              src="http://101.37.168.92:25080/static/img/logo.0c081c39.png"
+              src="../../../assets/logo.png"
               class="header-logo"
       />
-      <span class="title">运维工具</span>
+      <span class="title">ts-vue-element</span>
     </div>
     <el-menu
             background-color="rgba(36, 47, 87, 0.847058823529412)"
@@ -21,9 +21,9 @@
             :collapse-transition="false"
             @close="handleClose"
             :collapse="isCollapse"
-            router
+          
     >
-        <u-item :item="route" :key="route.path" v-for="(route,index) in staticRouter"> </u-item>
+        <u-item :item="route" :key="route.path" v-for="(route) in staticRouter" :base-path="route.path"> </u-item>
 
     </el-menu>
   </el-scrollbar>
@@ -176,7 +176,7 @@ export default class Sidbar extends Vue{
     .el-menu-item {
       height: 46px !important;
       overflow: hidden;
-      padding-left: 53px!important;
+      // padding-left: 53px!important;
       line-height: 46px !important;
       text-overflow: ellipsis;
       white-space: nowrap;

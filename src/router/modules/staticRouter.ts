@@ -6,52 +6,77 @@ export const staticRouter = [
         path: '/',
         name: 'Home',
         component:() => import(/* webpackChunkName: "about" */ '../../views/layouts/index.vue'),
-        redirect: "about",
-        meta:{ title: "OTC商户管理",},
+        redirect: "home",
         children: [
             {
-                name:'about-a',
-                path: "/about",
-                component: () => import(/* webpackChunkName: "about" */ '../../views/About.vue'),
-                meta:{ title: "商户帐号",},
+                name:'home-a',
+                path: "/home",
+                component: () => import(/* webpackChunkName: "about" */ '../../views/home/index.vue'),
+                meta:{ title: "首页",icon:'el-icon-help'},
             },
-            {
-                name:'Home1',
-                path: "/Home",
-                component: () => import(/* webpackChunkName: "about" */ '../../views/Home.vue'),
-                meta:{ title: "商户资产",},
-            }
+
         ]
     },
     {
-        path: '/enterprise',
-        name: 'enterprise',
+        path: '/external-link',
+        name: 'external-link',
         component:() => import(/* webpackChunkName: "about" */ '../../views/layouts/index.vue'),
-        redirect: "about",
-        meta:{ title: "企业平台",},
+        redirect: "home",
         children: [
             {
-                name:'enterprise-management',
-                path: "/enterprise/management",
-                component: () => import(/* webpackChunkName: "about" */ '../../views/enterprise/management.vue'),
-                meta:{ title: "企业管理",},
+                name:'external-link',
+                path: "https://github.com/zouzhibin/ts-vue-element-admin",
+                meta:{ title: "外链",icon:'el-icon-edit-outline'},
+            },
+
+        ]
+    },
+    {
+        path: '/components',
+        name: 'components',
+        redirect: "/components/management",
+        component:() => import(/* webpackChunkName: "about" */ '../../views/layouts/index.vue'),
+        meta:{ title: "组件",icon:'el-icon-s-grid'},
+        children: [
+            {
+                name:'components-management',
+                path: "/components/management",
+                component: () => import(/* webpackChunkName: "about" */ '../../views/components/management.vue'),
+                meta:{ title: "表格"},
             },
             {
-                name:'enterprise-assets',
-                path: "/enterprise/assets",
-                component: () => import(/* webpackChunkName: "about" */ '../../views/enterprise/assets.vue'),
-                meta:{ title: "企业资产",},
-            },{
-                name:'enterprise-transactionOrder',
-                path: "/enterprise/transactionOrder",
-                component: () => import(/* webpackChunkName: "about" */ '../../views/enterprise/transactionOrder.vue'),
-                meta:{ title: "企业交易订单",},
-            },{
-                name:'enterprise-withdrawOrder',
-                path: "/enterprise/withdrawOrder",
-                component: () => import(/* webpackChunkName: "about" */ '../../views/enterprise/withdrawOrder.vue'),
-                meta:{ title: "提现订单",},
-            }
+                name:'components-form',
+                path: "/components/form",
+                component: () => import(/* webpackChunkName: "about" */ '../../views/components/form.vue'),
+                meta:{ title: "表单"},
+            },
+            {
+                name:'components-progress',
+                path: "/components/progress",
+                component: () => import(/* webpackChunkName: "about" */ '../../views/components/progress.vue'),
+                meta:{ title: "进度条"},
+            },
+            {
+                name:'components-carousel',
+                path: "/components/carousel",
+                component: () => import(/* webpackChunkName: "about" */ '../../views/components/carousel.vue'),
+                meta:{ title: "轮播图"},
+            },
+        
         ]
-    }
+    },
+    // {
+    //     path: '/external-link',
+    //     name: 'external-link',
+    //     component:() => import(/* webpackChunkName: "about" */ '../../views/layouts/index.vue'),
+    //     redirect: "home",
+    //     children: [
+    //         {
+    //             name:'external-link',
+    //             path: "https://github.com/zouzhibin/ts-vue-element-admin",
+    //             meta:{ title: "打赏",icon:'el-icon-edit-outline'},
+    //         },
+
+    //     ]
+    // },
 ]
