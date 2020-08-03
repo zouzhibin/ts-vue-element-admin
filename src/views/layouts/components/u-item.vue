@@ -37,6 +37,7 @@ import ULink from "./u-link.vue";
 import path from 'path'
 import { isExternal } from "@/utils/validate";
 @Component({
+  name: 'u-item',
   components: { ULink },
 })
 export default class UItem extends Vue {
