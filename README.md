@@ -1,19 +1,21 @@
-# hello-world6
+# ts-vue-element-admin
 
-## Project setup
+### 项目预览地址
+See [项目预览地址](https://zouzhibin.github.io/ts-vue-element-admin/#/home).
+
+## 下载依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 运行
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包
 ```
 yarn build
 ```
 
-### 预览地址
-See [预览地址](https://zouzhibin.github.io/ts-vue-element-admin/#/home).
+
