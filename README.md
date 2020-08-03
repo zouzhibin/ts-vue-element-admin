@@ -15,5 +15,5 @@ yarn serve
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 预览地址
+See [预览地址](https://zouzhibin.github.io/ts-vue-element-admin/#/home).
