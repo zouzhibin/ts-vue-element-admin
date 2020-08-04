@@ -10,3 +10,8 @@ declare module "*.sass";
 declare module "*.styl";
 declare module "*.json";
 declare module "*.ts";
+
+
+declare module 'vue-count-to';
+
+declare module 'codemirror'

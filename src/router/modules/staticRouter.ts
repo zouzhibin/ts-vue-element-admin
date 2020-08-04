@@ -63,21 +63,13 @@ export const staticRouter = [
                 component: () => import(/* webpackChunkName: "about" */ '../../views/components/carousel.vue'),
                 meta:{ title: "轮播图"},
             },
-        
+            {
+                name:'components-carousel',
+                path: "/components/json-lint",
+                component: () => import(/* webpackChunkName: "about" */ '../../views/components/jsonLint.vue'),
+                meta:{ title: "JSON 编辑器"},
+            },
         ]
     },
-    // {
-    //     path: '/external-link',
-    //     name: 'external-link',
-    //     component:() => import(/* webpackChunkName: "about" */ '../../views/layouts/index.vue'),
-    //     redirect: "home",
-    //     children: [
-    //         {
-    //             name:'external-link',
-    //             path: "https://github.com/zouzhibin/ts-vue-element-admin",
-    //             meta:{ title: "打赏",icon:'el-icon-edit-outline'},
-    //         },
-
-    //     ]
-    // },
+    
 ]
