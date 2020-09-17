@@ -2,25 +2,27 @@
   <div>
     <el-row :gutter="12">
       <el-col :span="8">
-        <el-card shadow="hover">
+        <el-card >
           访问量 
           <count-to :start-val="0" :end-val="21892" :duration="2600" class="card-panel-num" />
         </el-card>
       </el-col>
       <el-col :span="8">
-        <el-card shadow="hover">
+        <el-card >
           消息 
           <count-to :start-val="0" :end-val="35895" :duration="2600" class="card-panel-num" />
         </el-card>
       </el-col>
       <el-col :span="8">
-        <el-card shadow="hover">
+        <el-card >
           页数
           <count-to :start-val="0" :end-val="4189" :duration="2600" class="card-panel-num" />
         </el-card>
       </el-col>
     </el-row>
+    <merchat></merchat>
     <div class="footer-card">
+      
       <el-row :gutter="12">
         <el-col :span="24">
           <el-card shadow="hover">
@@ -38,8 +40,9 @@
 import { Vue, Component, Prop } from "vue-property-decorator";
 import echarts from "echarts"
 import CountTo from 'vue-count-to'
+import Merchat from './components/index.vue'
 @Component({
-  components: {CountTo},
+  components: {CountTo,Merchat},
 })
 export default class UItem extends Vue {
   option = {

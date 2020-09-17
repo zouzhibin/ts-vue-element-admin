@@ -4,32 +4,31 @@
         <section class="g-layout-container" :class="isCollapse ? 'is-collapse-main' : ''">
             <u-header></u-header>
             <u-main class="g-layout-content">
-
             </u-main>
         </section>
     </div>
 </template>
 <script lang="ts">
+import { Getter, Action } from 'vuex-class'
+import { Vue, Component } from "vue-property-decorator";
 import USidebar from './components/u-sidebar.vue'
 import UHeader from './components/u-header.vue'
 import UMain from './components/u-main.vue'
-import { Getter, Action } from 'vuex-class'
-import { Vue, Component } from "vue-property-decorator";
 @Component({
+    name:'layout',
     components:{
         USidebar,
         UHeader,
         UMain
     }
 })
-class Layouts extends Vue {
+export default class Layouts extends Vue {
     @Getter('isCollapse') public isCollapse!: boolean
-    get title(){
+    protected get title(){
         const router:any = this.$router
         return router.history.current.meta.title
     }
 }
-export default Layouts;
 </script>
 <style lang="scss" scoped>
     .g-layout-container{
@@ -38,7 +37,7 @@ export default Layouts;
         margin-left: 220px;
         background: #f6f8f9;
         display: flex;
-        height: 100vh;
+        // height: 100vh;
         flex-direction: column;
         transition: all 0.2s ease-in-out;
     }

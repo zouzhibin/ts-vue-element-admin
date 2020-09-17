@@ -1,0 +1,33 @@
+│  App.vue
+│  main.ts
+│  shims-tsx.d.ts
+│  shims-vue.d.ts
+├─assets
+├─components
+│  └─u-jsonEditor
+│          index.vue
+├─router
+│  │  index.ts
+│  │
+│  └─modules
+├─store
+│  │  getters.ts
+│  │  index.ts
+│  │  tsTypes.ts
+│  │  types.ts
+│  │
+│  └─modules
+├─types
+│      global.d.ts
+│
+├─utils
+│      fetch.ts
+│      validate.ts
+│
+└─views
+    ├─components
+    ├─home
+    ├─layouts
+    │  │  index.vue
+    │  └─components
+    └─login
