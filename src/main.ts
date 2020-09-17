@@ -13,3 +13,6 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+
+// 预览  git push -u origin gh-pages
